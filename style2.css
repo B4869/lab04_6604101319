@@ -1,0 +1,169 @@
+body {
+    font-family: 'Mitr', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*bg-image*/
+    background-image: url(bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.media_element {
+    display: grid;
+    grid-template-rows: min-content;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.media_element img {
+    inline-size: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transform-origin: center;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.media_element img:hover {
+    padding: 0.25rem;
+    background: linear-gradient(45deg, #642bff, #ff22e6, #20c997, #0dcaf0);
+}
+
+.media_scroller {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 10%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #642bff, #ff22e6, #20c997, #0dcaf0);
+    border-radius: 10px;
+}
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.profile img {
+    height: 450px;
+    width: 275px;
+}
+
+.text-r {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 33.33%;
+    height: 10%;
+}
+
+.text-l {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 33.33%;
+    height: 10%;
+}
+
+.title {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: -5px;
+}
+
+.subtitle {
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: -5px;
+
+}
+
+.hoverKub {
+    transform-origin: center;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.hoverKub:hover {
+    transform: scale(1.1, 1.1);
+    background: linear-gradient(45deg, #642bff, #ff22e6, #20c997, #0dcaf0);
+}
+
+.graph {
+    margin-top: 50px;
+}
+
+.progress-container {
+    text-align: center;
+}
+
+.progress-circle {
+    width: 175px;
+    height: 175px;
+    position: relative;
+}
+
+.progress-circle .progress-mask,
+.progress-circle .fill {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.progress-circle .progress-mask {
+    clip: rect(0px, 150px, 150px, 75px);
+}
+
+.progress-circle .progress-mask.full {
+    clip: rect(auto, auto, auto, auto);
+    background: linear-gradient(45deg, #642bff, #ff22e6, #20c997, #0dcaf0);
+}
+
+.progress-circle .fill {
+    clip: rect(0px, 75px, 150px, 0px);
+}
+
+.progress-circle .progress-mask.half .fill {
+    transform: rotate(154.8deg);
+}
+
+.circle-inner {
+    width: 140px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 17.5px;
+    left: 17.5px;
+}
+
+.progress-circle .inside-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+}
